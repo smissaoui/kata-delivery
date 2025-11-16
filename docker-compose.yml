@@ -1,0 +1,44 @@
+version: "3.9"
+
+services:
+
+  app:
+    build:
+      context: .
+      dockerfile: infrastructure/Dockerfile
+    container_name: delivery-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+
+    environment:
+      TZ: "Europe/Paris"
+      SPRING_R2DBC_URL: r2dbc:postgresql://postgres:5432/delivery
+      SPRING_R2DBC_USERNAME: postgres
+      SPRING_R2DBC_PASSWORD: postgres
+
+      SPRING_LIQUIBASE_URL: jdbc:postgresql://postgres:5432/delivery
+      SPRING_LIQUIBASE_USER: postgres
+      SPRING_LIQUIBASE_PASSWORD: postgres
+
+      ADMIN_USERNAME: admin
+      ADMIN_PASSWORD: carrefour123
+
+      JWT_SECRET: QWERTYuiopasdfghjklZXCVBNMqwertyuiop1234567890PlmKJHGFDSA==
+      JWT_EXPIRATION: 3600000
+
+  postgres:
+    image: postgres:16
+    container_name: postgres
+    environment:
+      POSTGRES_DB: delivery
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

@@ -1,0 +1,11 @@
+/Users/soufianemissaoui/Desktop/kata-carrefour/projet/kata-delivery/domain/src/main/java/com/carrefour/domain/model/DeliveryMode.java
+/Users/soufianemissaoui/Desktop/kata-carrefour/projet/kata-delivery/domain/src/main/java/com/carrefour/domain/policy/DeliveryTodayPolicy.java
+/Users/soufianemissaoui/Desktop/kata-carrefour/projet/kata-delivery/domain/src/main/java/com/carrefour/domain/service/ReservationDomainService.java
+/Users/soufianemissaoui/Desktop/kata-carrefour/projet/kata-delivery/domain/src/main/java/com/carrefour/domain/policy/DeliveryPolicyFactory.java
+/Users/soufianemissaoui/Desktop/kata-carrefour/projet/kata-delivery/domain/src/main/java/com/carrefour/domain/policy/DeliveryAsapPolicy.java
+/Users/soufianemissaoui/Desktop/kata-carrefour/projet/kata-delivery/domain/src/main/java/com/carrefour/domain/exception/DomainException.java
+/Users/soufianemissaoui/Desktop/kata-carrefour/projet/kata-delivery/domain/src/main/java/com/carrefour/domain/policy/DrivePolicy.java
+/Users/soufianemissaoui/Desktop/kata-carrefour/projet/kata-delivery/domain/src/main/java/com/carrefour/domain/policy/DeliveryPolicyImpl.java
+/Users/soufianemissaoui/Desktop/kata-carrefour/projet/kata-delivery/domain/src/main/java/com/carrefour/domain/policy/DeliveryPolicy.java
+/Users/soufianemissaoui/Desktop/kata-carrefour/projet/kata-delivery/domain/src/main/java/com/carrefour/domain/model/Reservation.java
+/Users/soufianemissaoui/Desktop/kata-carrefour/projet/kata-delivery/domain/src/main/java/com/carrefour/domain/model/TimeSlot.java

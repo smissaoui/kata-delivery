@@ -1,0 +1,43 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: delivery-kata
+
+  r2dbc:
+    url: ${SPRING_R2DBC_URL:r2dbc:postgresql://localhost:5432/delivery}
+    username: ${SPRING_R2DBC_USERNAME:postgres}
+    password: ${SPRING_R2DBC_PASSWORD:root}
+    properties:
+      ssl: false
+
+  liquibase:
+    enabled: true
+    url: ${SPRING_LIQUIBASE_URL:jdbc:postgresql://localhost:5432/delivery}
+    user: ${SPRING_LIQUIBASE_USER:postgres}
+    password: ${SPRING_LIQUIBASE_PASSWORD:root}
+    change-log: classpath:db/changelog/master.yaml
+
+logging:
+  level:
+    root: INFO
+    com.carrefour: DEBUG
+    org.springframework.cache.interceptor: TRACE
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+security:
+  jwt:
+    secret: ${JWT_SECRET:QWERTYuiopasdfghjklZXCVBNMqwertyuiop1234567890PlmKJHGFDSA==}
+    expiration: ${JWT_EXPIRATION:3600000}
+
+  auth:
+    username: ${ADMIN_USERNAME:admin}
+    password: ${ADMIN_PASSWORD:carrefour123}

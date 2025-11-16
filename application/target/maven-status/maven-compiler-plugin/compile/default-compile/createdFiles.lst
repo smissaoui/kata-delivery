@@ -1,0 +1,11 @@
+com/carrefour/application/dto/CreateReservationCommand.class
+com/carrefour/application/exception/TimeSlotNotFoundException.class
+com/carrefour/application/mapper/TimeSlotMapper.class
+com/carrefour/application/service/ReservationService.class
+com/carrefour/application/port/TimeSlotRepository.class
+com/carrefour/application/exception/ReservationNotFoundException.class
+com/carrefour/application/port/ReservationRepository.class
+com/carrefour/application/mapper/TimeSlotMapperImpl.class
+com/carrefour/application/dto/TimeSlotDto.class
+com/carrefour/application/service/ReservationService$ReservationSlotTuple.class
+com/carrefour/application/service/TimeSlotService.class
